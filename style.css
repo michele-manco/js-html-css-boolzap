@@ -62,8 +62,13 @@ header{
   margin:  auto;
 
 }
+.leftyframe img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
 i:hover{
   transform: scale(1.2);
+  cursor: pointer;
 }
 i{
   color: #b1b1b1;
@@ -78,6 +83,9 @@ i{
   color: white;
   line-height: 67.75px;
   margin-left: 20px;
+  font-size: 14px;
+  width: 270px;
+  height: 61px;
 }
 .bellframe{
   width: 50px;
@@ -85,14 +93,19 @@ i{
   border: 1px solid #8edafa;
   border-radius: 50%;
   margin-left: 10px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   display: flex;
   justify-content: center;
+  margin-top: 7px;
+  background-color: white;
+  line-height: 50%;
 }
 .bellframe i{
-  font-size: 28px;
-  line-height: 48px;
-  color: white;
+  font-size: 21px;
+  line-height: 54px;
+  color:#8edafa;
+  display: flex;
+  justify-content: center;
 }
 .searchy{
   width: 100%;
@@ -140,7 +153,10 @@ box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
   background-color: #fafafa;
 
 }
-
+.user img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
 .user img{
   height: 70%;
   margin:  auto;
@@ -180,7 +196,10 @@ box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
   line-height: 51.75px;
   padding-right: 10px;
 }
-
+.rightyframe img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
 .rightyframe img{
   height: 70%;
   margin:  auto;
@@ -233,6 +252,8 @@ box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75);
   margin: 0 auto;
   margin-top: 4px;
   font-size: 16px;
+  border-left: 0;
+
 }
 .mess{
   background-color:#d2d4c9;

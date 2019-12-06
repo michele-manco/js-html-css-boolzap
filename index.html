@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e23757acf7.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -134,26 +135,42 @@
       </div>
     </div>
     <div class="mess">
-
-    </div>
-    <div class="footyright">
-      <div class="footleft">
-          <i class="far fa-smile"></i>
+      <div class="right-mess active">
       </div>
-      <div class="footcenter">
-        <input id="write" type="text" placeholder="Scrivi un messaggio" value="">
-
+      <div class="right-mess">
       </div>
-      <div class="footright">
-          <i class="fas fa-microphone"></i>
+      <div class="right-mess">
       </div>
-
+      <div class="right-mess sent">
+      </div>
+      </div>
+        <div class="footyright">
+          <div class="footleft">
+            <i class="far fa-smile"></i>
+          </div>
+          <div class="footcenter">
+            <input class="write" type="text" placeholder="Scrivi un messaggio" value="">
+          </div>
+            <div class="footright">
+              <i class="fas fa-microphone"></i>
+          </div>
+      </div>
     </div>
-
-    </div>
-
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <div class="template">
+    <div class="message">
+      <span class="message-text">insert message with jq</span>
+      <i class="fas fa-chevron-down footright message-options"></i>
+      <span class="message-time">20:30</span>
+      <div class="message-options-panel">
+          <div class="message-info">info messaggio</div>
+          <div class="message-destroy">cancella messaggio</div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="main.js" charset="utf-8"></script>
 </body>
 <footer>

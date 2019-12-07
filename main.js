@@ -10,7 +10,18 @@ $(document).ready(function(){
 
 
   });
+
+$('.write').focus(function(){
+    $('.footright i').toggleClass('fa fa-microphone  fas fa-paper-plane');
 });
+$('.write').blur(function(){
+    $('.footright i').toggleClass('fa fa-microphone  fas fa-paper-plane');
+});
+});
+
+
+
+
 function msg_go(){
   var text_msg = $('.write').val();
 

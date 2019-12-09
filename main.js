@@ -16,36 +16,50 @@ $('.write').focus(function(){
 });
 $('.write').blur(function(){
     $('.footright i').toggleClass('fa fa-microphone  fas fa-paper-plane');
-
-
 });
+  $('#lens').keyup(usersearch);
+  $('.hol').click(usersearch);
+  $('.user').click(function(){
+    var indy = $(this).index();
+    console.log(indy);
+    $('.user').removeClass('active');
+    $(this).addClass('active');
+    $('.right-mess').removeClass('active');
+    $('.right-mess').eq(indy).addClass('active');
+    var username = $(this).find('.iq').text();
+    console.log(username);
+    $('.ned').text(username);
+    var head = $(this).children('.frame').children('img').attr('src');
+    console.log(head);
+    $('.hedd').attr('src', head);
+  });
 
-$('#lens').keyup(function(){
-   var search = $(this).val();
-   console.log(search);
-   // $('.user').each(function(){
-   //   console.log($(this));
-   //   var name = $(this).find('.iq').text();
-   //   console.log(name);
-   // });
-   if(search.length != 0) {
-     $('div.user').each(function(){
-       var name = $(this).find('.iq').text();
-       search = search.toLowerCase();
-       name = name.toLowerCase();
-       if (name.includes(search)) {
-         $(this).show();
-
-
-       } else {
-         $(this).hide();
-       }
-     });
-
-   } else {
-     $('div.user').show();
-   }
-});
+// $('#lens').keyup(function(){
+//    var search = $(this).val();
+//    console.log(search);
+//    // $('.user').each(function(){
+//    //   console.log($(this));
+//    //   var name = $(this).find('.iq').text();
+//    //   console.log(name);
+//    // });
+//    if(search.length != 0) {
+//      $('div.user').each(function(){
+//        var name = $(this).find('.iq').text();
+//        search = search.toLowerCase();
+//        name = name.toLowerCase();
+//        if (name.includes(search)) {
+//          $(this).show();
+//
+//
+//        } else {
+//          $(this).hide();
+//        }
+//      });
+//
+//    } else {
+//      $('div.user').show();
+//    }
+// });
 });
 
 
@@ -70,4 +84,32 @@ function msg_come(){
   feedback.find('.message-text').text('ok');
   feedback.addClass('received');
   $('.right-mess.active').append(feedback);
+}
+function usersearch(){
+  $('#lens').keyup(function(){
+     var search = $(this).val();
+     console.log(search);
+     // $('.user').each(function(){
+     //   console.log($(this));
+     //   var name = $(this).find('.iq').text();
+     //   console.log(name);
+     // });
+     if(search.length != 0) {
+       $('div.user').each(function(){
+         var name = $(this).find('.iq').text();
+         search = search.toLowerCase();
+         name = name.toLowerCase();
+         if (name.includes(search)) {
+           $(this).show();
+
+
+         } else {
+           $(this).hide();
+         }
+       });
+
+     } else {
+       $('div.user').show();
+     }
+  });
 }

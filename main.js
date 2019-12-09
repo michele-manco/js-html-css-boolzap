@@ -32,6 +32,12 @@ $('.write').blur(function(){
     var head = $(this).children('.frame').children('img').attr('src');
     console.log(head);
     $('.hedd').attr('src', head);
+    $(document).on('click','message-options',function(){
+      $(this).siblings('.message-options-panel').toggleClass('active');
+    });
+    $('message-destroy').click(function(){
+      $(this).closest('message').hide();
+    })
   });
 
 // $('#lens').keyup(function(){

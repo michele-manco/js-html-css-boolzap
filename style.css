@@ -348,7 +348,23 @@ box-shadow: 0px 3px 6px -3px rgba(0,0,0,0.75); */
 }
 .message-options-panel{
   display: none;
+  position: absolute;
+	bottom: -75px;
+	width: 150px;
+	height: 80px;
+	background: white;
+}
+.righty .right-mess .message .message-options-panel.active {
+	display: block;
 }
 .message i{
   display: none;
+}
+.righty .right-mess .message:hover .message-options, .righty .right-mess .message .message-options.active {
+	display: block;
+}
+.righty .right-mess .message .message-options {
+	display: none;
+	color: #B6B9BB;
+	cursor: pointer;
 }
